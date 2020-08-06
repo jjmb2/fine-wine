@@ -11,6 +11,14 @@ def txt_to_list(file_name):
 def get_rand_index(word_array):
     return random.randint(0, len(word_array))
 
+def print_description(adjective_1, adjective_2, noun_1):
+    if adjective_1[0] in ['a','e','i','o','u']:
+        article = 'An'
+    else:
+        article = "A"
+
+    print(f"{article} {adjective_1} wine with hints of {adjective_2} {noun_1}.")
+
 def main():
 
     adjectives = txt_to_list("adjectives.txt")
@@ -20,7 +28,7 @@ def main():
     adjective_2 = adjectives[get_rand_index(adjectives)]
     noun_1 = nouns[get_rand_index(nouns)]
 
-    print(f"A {adjective_1} wine with hints of {adjective_2} {noun_1}.")
+    print_description(adjective_1, adjective_2, noun_1)
     
 if __name__ == "__main__":
     main()
