@@ -2,7 +2,7 @@
 
 import random
 
-def getRandIndex(word_array):
+def get_rand_index(word_array):
     return random.randint(0, len(word_array))
 
 def main():
@@ -15,9 +15,9 @@ def main():
         nouns = f.readlines()
         nouns = [line.strip() for line in nouns]
 
-    adjective_1 = adjectives[getRandIndex(adjectives)]
-    adjective_2 = adjectives[getRandIndex(adjectives)]
-    noun_1 = nouns[getRandIndex(nouns)]
+    adjective_1 = adjectives[get_rand_index(adjectives)]
+    adjective_2 = adjectives[get_rand_index(adjectives)]
+    noun_1 = nouns[get_rand_index(nouns)]
 
     print(f"A {adjective_1} wine with hints of {adjective_2} {noun_1}.")
     
